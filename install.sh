@@ -3,17 +3,19 @@
 # Get the path to the current script
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
+function install() {
+	if [ ! -f "$2" ]; then
+		ln -s "$1" "$2"
+	fi
+}
+
 # ZSH dotfiles
-if [ ! -f ~/.zshrc ]; then
-	ln -s $DIR/.zshrc ~/.zshrc
-fi
+install $DIR/.zshrc ~/.zshrc
 
 # oh-my-zsh custom files
-if [ ! -d ~/.oh-my-zsh/custom ]; then
-	ln -s $DIR/custom-oh-my-zsh ~/.oh-my-zsh/custom
-fi
+install $DIR/custom-oh-my-zsh ~/.oh-my-zsh/custom
 
 # Vim dotfiles
-if [ ! -f ~/.vimrc ]; then
-	ln -s $DIR/.vimrc ~/.vimrc
-fi
+install $DIR/.vimrc ~/.vimrc
+install $DIR/.vimrc-base ~/.vimrc-base
+
