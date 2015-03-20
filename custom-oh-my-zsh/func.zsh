@@ -6,3 +6,4 @@ function bomb     { export PS1="~ 💣  "; }
 function sportsball { export PS1="~ 🏈  "; }
 function dice     { export PS1="~ 🎲  "; }
 function monster  { export PS1="~ 👾  "; }
+

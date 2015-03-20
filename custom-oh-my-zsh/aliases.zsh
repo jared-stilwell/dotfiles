@@ -2,6 +2,15 @@
 alias ll='ls -la'
 alias cdtools='cd ~/tools'
 
+# Task Notification
+function tn() {
+	terminal-notifier \
+		-message $1 \
+		-execute ${2:=""} \
+		-title ${3:="Task Complete"} \
+		-sound ${4:=default} 
+}
+
 # ZSH
 alias pref='vim ~/.zshrc'
 alias pref-alias='vim ~/.oh-my-zsh/custom/aliases.zsh'
