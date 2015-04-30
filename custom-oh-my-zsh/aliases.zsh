@@ -14,6 +14,7 @@ function tn() {
 # ZSH
 alias pref='vim ~/.zshrc'
 alias pref-alias='vim ~/.oh-my-zsh/custom/aliases.zsh'
+alias pref-func='vim ~/.oh-my-zsh/custom/func.zsh'
 alias pref-path='vim ~/.oh-my-zsh/custom/path.zsh'
 alias cdomz='cd ~/.oh-my-zsh/custom'
 
@@ -41,11 +42,15 @@ alias gitpeek='git show-branch --sha1-name'
 alias gtop='git rev-parse HEAD | pbcopy'
 alias rmorig='rm -rf **/*.orig'
 alias rmnclean='for k in $(git branch -l | grep "^ *RMN-"); do git branch -D $k;done';
+alias relclean='for k in $(git branch -l | grep "^ *[0-9][0-9]\.[0-9][0-9]"); do git branch -D $k;done';
 
 # Docker
 alias b2d='boot2docker'
 alias drm='docker rm'
 alias drmi='docker rmi'
+alias drma='docker rm $(docker ps -a -q)'
+alias drmia='docker rmi $(docker images -q)'
+alias dclean='drma && drmia'
 
 # Karma
 alias ksp='karma start --browsers=PhantomJS'
