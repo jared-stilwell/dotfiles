@@ -1,5 +1,7 @@
 # General
 alias ll='ls -la'
+alias ..='cd ..';
+alias ...='cd ../..';
 alias cdtools='cd ~/tools'
 
 # Task Notification
