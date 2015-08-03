@@ -89,6 +89,7 @@ alias viprefs='vim ~/.vimrc'
 
 # WebDriver
 alias webdriver='java -jar ~/tools/webdriver/selenium-server-standalone-2.33.0.jar'
+alias chromedriver='chromedriver --port=4444 --url-base=wd/hub'
 
 # Web Server
 alias webserver='python -m SimpleHTTPServer'
