@@ -47,7 +47,6 @@ alias rmnclean='for k in $(git branch -l | grep "^ *RMN-"); do git branch -D $k;
 alias relclean='for k in $(git branch -l | grep "^ *[0-9][0-9]\.[0-9][0-9]"); do git branch -D $k;done';
 
 # Docker
-alias b2d='boot2docker'
 alias drm='docker rm'
 alias drmi='docker rmi'
 alias drma='docker rm $(docker ps -a -q)'
