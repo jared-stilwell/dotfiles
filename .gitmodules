@@ -1,0 +1,9 @@
+[submodule "link/vim-pathogen"]
+	path = link/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen.git
+[submodule "link/syntastic"]
+	path = link/syntastic
+	url = git@github.com:scrooloose/syntastic.git
+[submodule "link/nerdtree"]
+	path = link/nerdtree
+	url = git@github.com:scrooloose/nerdtree.git

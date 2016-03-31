@@ -62,7 +62,7 @@ augroup vimrcEx
 augroup END
 
 " Pathogen Init
-call pathogen#infect()
+execute pathogen#infect()
 
 " CUSTOM KEY COMMANDS
 
@@ -80,7 +80,4 @@ map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 " in
 " Normal mode: <Leader>t
 map <Leader>te :tabedit <C-R>=expand("%:p:h") . "/" <CR>
-
-" Clears trailing whitespace
-map <Leader><Space> :%s/\s\+$//<CR>:let @/=''<CR>
 
