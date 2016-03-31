@@ -1,3 +1,7 @@
+"
+" NERDTree
+"
+
 " Toggle
 map <C-n> :NERDTreeToggle<CR>
 
