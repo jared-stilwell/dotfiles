@@ -9,6 +9,9 @@ export NVM_DIR="/Users/jstilwell/.nvm"
 export PATH=$PATH:/usr/local/share/npm/bin
 export PATH=./node_modules/.bin:$PATH
 
+# Python
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
+
 # Tools
 export PATH=$PATH:~/tools:~/bin
 
