@@ -61,6 +61,8 @@ augroup vimrcEx
 
 augroup END
 
+" Pathogen Init
+call pathogen#infect()
 
 " CUSTOM KEY COMMANDS
 

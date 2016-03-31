@@ -13,9 +13,14 @@ function install() {
 install $DIR/.zshrc ~/.zshrc
 
 # oh-my-zsh custom files
+rm -rf ~/.oh-my-zsh/custom
 install $DIR/custom-oh-my-zsh ~/.oh-my-zsh/custom
 
 # Vim dotfiles
 install $DIR/.vimrc ~/.vimrc
 install $DIR/.vimrc-base ~/.vimrc-base
+
+rm -rf ~/.vim/autoload
+mkdir -p ~/.vim/autoload
+install $DIR/.vim/autoload/pathogen.vim ~/.vim/autoload/pathogen.vim
 
