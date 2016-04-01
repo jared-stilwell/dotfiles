@@ -18,3 +18,10 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin
 
+# Enable 256 color palette
+if [ -e /usr/share/terminfo/x/xterm-256color ]; then
+	export TERM='xterm-256color'
+else
+	export TERM='xterm-color'
+fi
+

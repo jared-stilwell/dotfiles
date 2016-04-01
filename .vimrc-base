@@ -25,6 +25,9 @@ set smartindent
 set tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab
 set visualbell
 
+" Colors
+set t_Co=256
+
 filetype plugin indent on
 
 augroup vimrcEx

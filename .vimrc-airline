@@ -3,7 +3,7 @@
 "
 
 " Theme
-let g:airline_theme='dark'
+let g:airline_theme='luna'
 
 " Ensure the status line appears all the time
 set laststatus=2

@@ -40,4 +40,4 @@ install $DIR/link/vim-pathogen/autoload/pathogen.vim ~/.vim/autoload/pathogen.vi
 install_vim_plugin nerdtree
 install_vim_plugin syntastic
 install_vim_plugin vim-airline
-
+install_vim_plugin vim-airline-themes
