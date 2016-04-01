@@ -10,5 +10,3 @@ source ~/.vimrc-syntastic
 " Airline configuration
 source ~/.vimrc-airline
 
-" Add other environment-specific vim configs
-source ~/.vimrc-rmn
