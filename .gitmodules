@@ -7,3 +7,6 @@
 [submodule "link/nerdtree"]
 	path = link/nerdtree
 	url = git@github.com:scrooloose/nerdtree.git
+[submodule "link/vim-airline"]
+	path = link/vim-airline
+	url = https://github.com/vim-airline/vim-airline

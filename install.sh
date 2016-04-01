@@ -29,6 +29,7 @@ install $DIR/.vimrc ~/.vimrc
 install $DIR/.vimrc-base ~/.vimrc-base
 install $DIR/.vimrc-nerdtree ~/.vimrc-nerdtree
 install $DIR/.vimrc-syntastic ~/.vimrc-syntastic
+install $DIR/.vimrc-airline ~/.vimrc-airline
 
 ## Pathogen
 rm -rf ~/.vim/autoload
@@ -38,4 +39,5 @@ install $DIR/link/vim-pathogen/autoload/pathogen.vim ~/.vim/autoload/pathogen.vi
 ## Plugins
 install_vim_plugin nerdtree
 install_vim_plugin syntastic
+install_vim_plugin vim-airline
 
