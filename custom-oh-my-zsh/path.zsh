@@ -12,6 +12,3 @@ export PATH=./node_modules/.bin:$PATH
 # Tools
 export PATH=$PATH:~/tools:~/bin
 
-# Git Fu
-export PATH=$PATH:~/projects/gitfu
-
