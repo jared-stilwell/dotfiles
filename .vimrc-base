@@ -75,6 +75,9 @@ nmap <leader>w :set wrap!<CR>
 " Show invisible characters
 nmap <leader>l :set list!<CR>
 
+" Save + quit the current viewport
+map <Leader>q :q <CR>
+
 " Opens an edit command with the path of the currently edited file filled in
 " Normal mode: <Leader>e
 map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
