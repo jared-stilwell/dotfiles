@@ -43,3 +43,6 @@ install_vim_plugin vim-airline
 install_vim_plugin vim-airline-themes
 install_vim_plugin editorconfig-vim
 
+# Editor Config
+install $DIR/.editorconfig ~/.editorconfig
+
