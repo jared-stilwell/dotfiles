@@ -13,3 +13,6 @@
 [submodule "link/vim-airline-themes"]
 	path = link/vim-airline-themes
 	url = git@github.com:vim-airline/vim-airline-themes.git
+[submodule "link/editorconfig-vim"]
+	path = link/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim.git

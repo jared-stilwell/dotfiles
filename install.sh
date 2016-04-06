@@ -36,8 +36,10 @@ rm -rf ~/.vim/autoload
 mkdir -p ~/.vim/autoload
 install $DIR/link/vim-pathogen/autoload/pathogen.vim ~/.vim/autoload/pathogen.vim
 
-## Plugins
+## Vim Plugins
 install_vim_plugin nerdtree
 install_vim_plugin syntastic
 install_vim_plugin vim-airline
 install_vim_plugin vim-airline-themes
+install_vim_plugin editorconfig-vim
+
