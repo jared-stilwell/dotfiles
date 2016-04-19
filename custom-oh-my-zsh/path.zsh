@@ -12,3 +12,7 @@ export PATH=./node_modules/.bin:$PATH
 # Tools
 export PATH=$PATH:~/tools:~/bin
 
+# Python virtualenvwrapper paths
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/projects
+source /usr/local/bin/virtualenvwrapper.sh
