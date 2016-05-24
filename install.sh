@@ -31,6 +31,11 @@ install $DIR/.vimrc-nerdtree ~/.vimrc-nerdtree
 install $DIR/.vimrc-syntastic ~/.vimrc-syntastic
 install $DIR/.vimrc-airline ~/.vimrc-airline
 
+# Neovim mapping
+mkdir -p $HOME/.config
+ln -s ~/.vim $HOME/.config/nvim
+ln -s ~/.vimrc $HOME/.config/nvim/init.vim
+
 ## Pathogen
 rm -rf ~/.vim/autoload
 mkdir -p ~/.vim/autoload
