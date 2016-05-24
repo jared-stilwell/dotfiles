@@ -26,6 +26,7 @@ set tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab
 set visualbell
 
 " Colors
+colorscheme default
 set t_Co=256
 
 filetype plugin indent on

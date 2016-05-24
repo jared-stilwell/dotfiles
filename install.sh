@@ -33,8 +33,12 @@ install $DIR/.vimrc-airline ~/.vimrc-airline
 
 # Neovim mapping
 mkdir -p $HOME/.config
-ln -s ~/.vim $HOME/.config/nvim
-ln -s ~/.vimrc $HOME/.config/nvim/init.vim
+ln -fs ~/.vim $HOME/.config/nvim
+ln -fs ~/.vimrc $HOME/.config/nvim/init.vim
+ln -fs ~/.vimrc-base $HOME/.config/nvim/.vimrc-base
+ln -fs ~/.vimrc-airline $HOME/.config/nvim/.vimrc-airline
+ln -fs ~/.vimrc-nerdtree $HOME/.config/nvim/.vimrc-nerdtree
+ln -fs ~/.vimrc-syntastic $HOME/.config/nvim/.vimrc-syntastic
 
 ## Pathogen
 rm -rf ~/.vim/autoload
