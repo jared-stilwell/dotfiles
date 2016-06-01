@@ -63,6 +63,10 @@ augroup vimrcEx
 	" Set tab policy for PHP files
 	autocmd FileType php setlocal shiftwidth=4 tabstop=4 expandtab
 
+	" Standard javascript formatting on save
+	autocmd bufwritepost *.js silent !standard-format -w %
+	set autoread
+
 augroup END
 
 " Pathogen Init
