@@ -64,8 +64,8 @@ augroup vimrcEx
 	autocmd FileType php setlocal shiftwidth=4 tabstop=4 expandtab
 
 	" Standard javascript formatting on save
-	autocmd bufwritepost *.js silent !standard-format -w %
-	set autoread
+	" autocmd bufwritepost *.js silent !standard-format -w %
+	" set autoread
 
 augroup END
 

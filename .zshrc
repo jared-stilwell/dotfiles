@@ -25,3 +25,6 @@ else
 	export TERM='xterm-color'
 fi
 
+
+# added by travis gem
+[ -f /Users/jstilwell/.travis/travis.sh ] && source /Users/jstilwell/.travis/travis.sh

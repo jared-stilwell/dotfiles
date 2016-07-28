@@ -4,8 +4,9 @@ function repref() {
 
 # General
 alias ll='ls -la'
-alias ..='cd ..';
-alias ...='cd ../..';
+alias ..='cd ..'
+alias ...='cd ../..'
+alias beep='echo -e "\a"'
 
 # ZSH
 alias cdomz='cd ~/.oh-my-zsh/custom'
@@ -34,6 +35,7 @@ alias drmi='docker rmi'
 alias drma='docker rm $(docker ps -a -q)'
 alias drmia='docker rmi $(docker images -q)'
 alias dclean='drma && drmia'
+alias dmstart='docker-machine start'
 
 # Karma
 alias ksp='karma start --browsers=PhantomJS'
