@@ -51,6 +51,8 @@ install_vim_plugin syntastic
 install_vim_plugin vim-airline
 install_vim_plugin vim-airline-themes
 install_vim_plugin editorconfig-vim
+install_vim_plugin vim-polyglot
+install_vim_plugin scss-syntax
 
 # Editor Config
 install $DIR/.editorconfig ~/.editorconfig

@@ -46,6 +46,7 @@ augroup vimrcEx
 	autocmd BufRead,BufNewFile *.md set filetype=markdown
 	autocmd BufNewFile,BufRead *.es6 set filetype=javascript
 	autocmd BufNewFile,BufRead *.php set filetype=php
+	autocmd BufNewFile,BufRead *.hbs set filetype=handlebars
 
 	" Enable spellchecking for Markdown
 	autocmd FileType markdown setlocal spell
