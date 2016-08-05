@@ -10,3 +10,6 @@ source ~/.vimrc-syntastic
 " Airline configuration
 source ~/.vimrc-airline
 
+" Auto-save configuration
+source ~/.vimrc-auto-save
+

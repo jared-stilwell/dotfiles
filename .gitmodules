@@ -22,3 +22,6 @@
 [submodule "link/scss-syntax.vim"]
 	path = link/scss-syntax.vim
 	url = https://github.com/cakebaker/scss-syntax.vim
+[submodule "link/vim-auto-save"]
+	path = link/vim-auto-save
+	url = https://github.com/vim-scripts/vim-auto-save.git

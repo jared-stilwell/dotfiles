@@ -30,6 +30,7 @@ install $DIR/.vimrc-base ~/.vimrc-base
 install $DIR/.vimrc-nerdtree ~/.vimrc-nerdtree
 install $DIR/.vimrc-syntastic ~/.vimrc-syntastic
 install $DIR/.vimrc-airline ~/.vimrc-airline
+install $DIR/.vimrc-auto-save ~/.vimrc-auto-save
 
 # Neovim mapping
 mkdir -p $HOME/.config
@@ -37,6 +38,7 @@ ln -fs ~/.vim $HOME/.config/nvim
 ln -fs ~/.vimrc $HOME/.config/nvim/init.vim
 ln -fs ~/.vimrc-base $HOME/.config/nvim/.vimrc-base
 ln -fs ~/.vimrc-airline $HOME/.config/nvim/.vimrc-airline
+ln -fs ~/.vimrc-auto-save $HOME/.config/nvim/.vimrc-auto-save
 ln -fs ~/.vimrc-nerdtree $HOME/.config/nvim/.vimrc-nerdtree
 ln -fs ~/.vimrc-syntastic $HOME/.config/nvim/.vimrc-syntastic
 
@@ -50,8 +52,9 @@ install_vim_plugin nerdtree
 install_vim_plugin syntastic
 install_vim_plugin vim-airline
 install_vim_plugin vim-airline-themes
-install_vim_plugin editorconfig-vim
+install_vim_plugin vim-auto-save
 install_vim_plugin vim-polyglot
+install_vim_plugin editorconfig-vim
 install_vim_plugin scss-syntax
 
 # Editor Config
