@@ -1,2 +1,0 @@
-" Auto-save plugin configuration
-let g:auto_save = 1 " enable auto save
