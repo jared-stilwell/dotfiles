@@ -23,3 +23,6 @@
 	path = link/scss-syntax.vim
 	url = https://github.com/cakebaker/scss-syntax.vim
 
+[submodule "link/vim-plug"]
+	path = link/vim-plug
+	url = https://github.com/junegunn/vim-plug.git

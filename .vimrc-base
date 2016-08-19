@@ -70,9 +70,6 @@ augroup vimrcEx
 
 augroup END
 
-" Pathogen Init
-execute pathogen#infect()
-
 " CUSTOM KEY COMMANDS
 
 " Wrap text
