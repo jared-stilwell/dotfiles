@@ -10,6 +10,3 @@ source ~/.vimrc-nerdtree
 " Synstastic configuration
 source ~/.vimrc-syntastic
 
-" Airline configuration
-source ~/.vimrc-airline
-

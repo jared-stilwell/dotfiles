@@ -6,4 +6,8 @@ Plug 'scrooloose/syntastic'
 Plug 'vim-scripts/vim-polyglot'
 Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
 
+" FZF (Fuzzy Searching)
+Plug 'junegunn/fzf', { 'dir' : '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
 call plug#end()

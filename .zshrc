@@ -28,3 +28,5 @@ fi
 
 # added by travis gem
 [ -f /Users/jstilwell/.travis/travis.sh ] && source /Users/jstilwell/.travis/travis.sh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

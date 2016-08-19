@@ -30,7 +30,6 @@ install $DIR/.vimrc-base ~/.vimrc-base
 install $DIR/.vimrc-plug ~/.vimrc-plug
 install $DIR/.vimrc-nerdtree ~/.vimrc-nerdtree
 install $DIR/.vimrc-syntastic ~/.vimrc-syntastic
-install $DIR/.vimrc-airline ~/.vimrc-airline
 
 # Neovim mapping
 mkdir -p $HOME/.config
