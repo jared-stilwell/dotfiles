@@ -10,3 +10,6 @@ source ~/.vimrc-nerdtree
 " Synstastic configuration
 source ~/.vimrc-syntastic
 
+" Fuzzy matching
+source ~/.vimrc-fzf
+

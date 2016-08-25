@@ -1,7 +1,9 @@
 call plug#begin('~/.vim/plugged')
 
-" Editor plugins
 Plug 'scrooloose/nerdtree'
+Plug 'editorconfig/editorconfig-vim'
+
+" Syntax Highlighting
 Plug 'scrooloose/syntastic'
 Plug 'vim-scripts/vim-polyglot'
 Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }

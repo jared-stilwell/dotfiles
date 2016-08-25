@@ -73,44 +73,28 @@ augroup END
 " CUSTOM KEY COMMANDS
 
 " Wrap text
-nmap <leader>w :set wrap!<CR>
+nmap <Leader>w :set wrap!<CR>
 
 " Show invisible characters
-nmap <leader>l :set list!<CR>
+nmap <Leader>l :set list!<CR>
 
 " Save + quit the current viewport
 map <Leader>q :q <CR>
 
 " Opens an edit command with the path of the currently edited file filled in
 " Normal mode: <Leader>e
-map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+nmap <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 
 " Opens a tab edit command with the path of the currently edited file filled
 " in
 " Normal mode: <Leader>t
-map <Leader>te :tabedit <C-R>=expand("%:p:h") . "/" <CR>
+nmap <Leader>te :tabedit <C-R>=expand("%:p:h") . "/" <CR>
+nmap <Leader>n :tabnext<CR>
+nmap <Leader>N :tabprevious<CR>
+nmap <Leader>0 :tabfirst<CR>
 
 " Opens a vertical split command with the path of the currently edited file
 " filled in
 " Normal mode: <Leader>v
-map <Leader>v :vsplit <C-R>=expand("%:p:h") . "/" <CR>
-
-" Better Searching
-if executable('ag')
-	" Use ag over grep
-	set grepprg=ag\ --nogroup\ --nocolor
-
-	" Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-	let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-
-	" ag is fast enough that CtrlP doesn't need to cache
-	let g:ctrlp_use_caching = 0
-endif
-
-" Bind K to grep word under cursor
-nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
-
-" Bind \ (backward-slash) to grep shortcut
-command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
-nnoremap \ :Ag<SPACE>
+nmap <Leader>v :vsplit <C-R>=expand("%:p:h") . "/" <CR>
 

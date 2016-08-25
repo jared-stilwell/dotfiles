@@ -30,21 +30,19 @@ install $DIR/.vimrc-base ~/.vimrc-base
 install $DIR/.vimrc-plug ~/.vimrc-plug
 install $DIR/.vimrc-nerdtree ~/.vimrc-nerdtree
 install $DIR/.vimrc-syntastic ~/.vimrc-syntastic
+install $DIR/.vimrc-fzf ~/.vimrc-fzf
 
 # Neovim mapping
 mkdir -p $HOME/.config
 ln -fs ~/.vim $HOME/.config/nvim
 ln -fs ~/.vimrc $HOME/.config/nvim/init.vim
 ln -fs ~/.vimrc-base $HOME/.config/nvim/.vimrc-base
-# ln -fs ~/.vimrc-airline $HOME/.config/nvim/.vimrc-airline
 ln -fs ~/.vimrc-nerdtree $HOME/.config/nvim/.vimrc-nerdtree
 ln -fs ~/.vimrc-syntastic $HOME/.config/nvim/.vimrc-syntastic
+ln -fs ~/.vimrc-fzf $HOME/.config/nvim/.vimrc-fzf
 
 ## vim-plug plugin manager
 rm -rf ~/.vim/autoload
 mkdir -p ~/.vim/autoload
 install $DIR/link/vim-plug/plug.vim ~/.vim/autoload/plug.vim
-
-# Editor Config
-install $DIR/.editorconfig ~/.editorconfig
 

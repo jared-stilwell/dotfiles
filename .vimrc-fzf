@@ -1,0 +1,4 @@
+"
+" FZF -- Fuzzy Finder
+"
+nmap <Leader>f :FZF<CR>
