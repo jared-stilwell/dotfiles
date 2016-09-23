@@ -13,3 +13,6 @@ source ~/.vimrc-syntastic
 " Fuzzy matching
 source ~/.vimrc-fzf
 
+" Nova color scheme
+colorscheme nova
+

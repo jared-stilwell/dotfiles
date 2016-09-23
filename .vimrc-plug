@@ -5,8 +5,13 @@ Plug 'editorconfig/editorconfig-vim'
 
 " Syntax Highlighting
 Plug 'scrooloose/syntastic'
-Plug 'vim-scripts/vim-polyglot'
-Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
+Plug 'trevordmiller/nova-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'othree/html5.vim'
+Plug 'hail2u/vim-css3-syntax'
+
+" React/JSX syntax highlighting
+" Plug 'mxw/vim-jsx'
 
 " FZF (Fuzzy Searching)
 Plug 'junegunn/fzf', { 'dir' : '~/.fzf', 'do': './install --all' }
