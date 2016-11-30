@@ -24,6 +24,13 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin
 
+# Prompt styling
+PROMPT=$'
+%{$fg[blue]%}%2/%{$reset_color%} \e[3m$(git_prompt_info)\e[23m$(bzr_prompt_info)% %{$fg[white]%}[%T]%{$reset_color%}
+%{$fg_bold[black]%}>%{$reset_color%} '
+
+PROMPT2="%{$fg_blod[black]%}%_> %{$reset_color%}"
+
 # added by travis gem
 [ -f /Users/jstilwell/.travis/travis.sh ] && source /Users/jstilwell/.travis/travis.sh
 
