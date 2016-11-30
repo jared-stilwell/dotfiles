@@ -13,6 +13,13 @@ source ~/.vimrc-syntastic
 " Fuzzy matching
 source ~/.vimrc-fzf
 
-" Nova color scheme
-colorscheme nova
+" Solarized color scheme
+syntax enable
+set background=dark
+colorscheme solarized
+
+" Italicized comments
+let &t_ZH="\e[3m"
+let &t_ZR="\e[23m"
+highlight Comment cterm=italic
 

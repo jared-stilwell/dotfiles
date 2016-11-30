@@ -22,7 +22,9 @@
 [submodule "link/scss-syntax.vim"]
 	path = link/scss-syntax.vim
 	url = https://github.com/cakebaker/scss-syntax.vim
-
 [submodule "link/vim-plug"]
 	path = link/vim-plug
 	url = https://github.com/junegunn/vim-plug.git
+[submodule "link/solarized"]
+	path = link/solarized
+	url = https://github.com/altercation/solarized.git

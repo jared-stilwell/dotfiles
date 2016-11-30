@@ -24,6 +24,16 @@ install $DIR/.zshrc ~/.zshrc
 rm -rf ~/.oh-my-zsh/custom
 install $DIR/custom-oh-my-zsh ~/.oh-my-zsh/custom
 
+# Vim color schemes
+mkdir -p ~/.vim/colors
+rm -f ~/.vim/colors/solarized.vim
+ln -s \
+	$DIR/link/solarized/vim-colors-solarized/colors/solarized.vim \
+	~/.vim/colors/solarized.vim
+
+# Add term info to allow italics to work
+tic xterm-256color-italic.terminfo
+
 # Vim dotfiles
 install $DIR/.vimrc ~/.vimrc
 install $DIR/.vimrc-base ~/.vimrc-base
