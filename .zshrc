@@ -1,37 +1,27 @@
-# Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
-
-# Print system info
-archey
-
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="frisk"
+PROFILE_STARTUP=false
+if [[ "$PROFILE_STARTUP" == true ]]; then
+    echo "Profiling startup time..."
+    # http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html
+    PS4=$'%D{%M%S%.} %N:%i> '
+    exec 3>&2 2>/tmp/startlog.$$
+    setopt xtrace prompt_subst
+fi
 
 # Enable italics within iTerm
 TERM=xterm-256color-italic
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(hosts)
-
-# Initialize Oh my zsh!
+# Initialize oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
+ZSH_THEME="jared"
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin
 
-# Prompt styling
-PROMPT=$'
-%{$fg[blue]%}%2/%{$reset_color%} \e[3m$(git_prompt_info)\e[23m$(bzr_prompt_info)% %{$fg[white]%}[%T]%{$reset_color%}
-%{$fg_bold[black]%}>%{$reset_color%} '
-
-PROMPT2="%{$fg_blod[black]%}%_> %{$reset_color%}"
-
-# added by travis gem
-[ -f /Users/jstilwell/.travis/travis.sh ] && source /Users/jstilwell/.travis/travis.sh
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+if [[ "$PROFILE_STARTUP" == true ]]; then
+    echo "Done profiling startup time."
+    unsetopt xtrace
+    exec 2>&3 3>&-
+fi
