@@ -16,3 +16,8 @@ function nodeunitdebug() {
 	supervisor --debug-brk -- `which nodeunit` $1 & 2>$1 > /dev/null
 }
 
+# Pet (https://github.com/knqyf263/pet)
+function prev() {
+    PREV=$(fc -lrn | head -n 1)
+    sh -c "pet new `printf %q "$PREV"`"
+}
