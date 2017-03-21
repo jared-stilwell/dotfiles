@@ -7,6 +7,7 @@ alias ll='ls -la'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias beep='echo -e "\a"'
+alias wtf=man
 
 # ZSH
 alias cdomz='cd ~/.oh-my-zsh/custom'
