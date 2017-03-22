@@ -12,11 +12,12 @@ TERM=xterm-256color-italic
 
 # Initialize oh-my-zsh
 export ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="jared"
+ZSH_THEME="gentoo"
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin
+export PATH="$HOME/.yarn/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -26,4 +27,3 @@ if [[ "$PROFILE_STARTUP" == true ]]; then
     exec 2>&3 3>&-
 fi
 
-export PATH="$HOME/.yarn/bin:$PATH"

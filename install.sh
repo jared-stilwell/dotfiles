@@ -43,6 +43,7 @@ install $DIR/.vimrc-syntastic ~/.vimrc-syntastic
 install $DIR/.vimrc-fzf ~/.vimrc-fzf
 
 # Neovim mapping
+mkdir -p $HOME/.vim/backup
 mkdir -p $HOME/.config
 ln -fs ~/.vim $HOME/.config/nvim
 ln -fs ~/.vimrc $HOME/.config/nvim/init.vim

@@ -45,6 +45,11 @@ alias ksc='karma start --browsers=Chrome'
 # Node
 alias npmclean='rm -rf node_modules && npm install'
 
+## Compensate for NVM setup
+## https://github.com/creationix/nvm/issues/539#issuecomment-245791291
+alias node='unalias node ; unalias npm ; nvm use default ; node $@'
+alias npm='unalias node ; unalias npm ; nvm use default ; npm $@'
+
 # Web Server
 alias webserver='python -m SimpleHTTPServer'
 

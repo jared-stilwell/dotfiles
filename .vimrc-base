@@ -23,6 +23,7 @@ set smartcase
 set smartindent
 set tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab
 set visualbell
+set mouse=a
 
 filetype plugin indent on
 
