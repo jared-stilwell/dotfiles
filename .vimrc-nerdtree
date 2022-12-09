@@ -14,3 +14,4 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " Set the default directory arrow icons
 let g:NERDTreeDirArrowExpandable = '📁'
 let g:NERDTreeDirArrowCollapsible = '📂'
+

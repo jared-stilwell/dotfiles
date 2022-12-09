@@ -25,6 +25,3 @@
 [submodule "link/vim-plug"]
 	path = link/vim-plug
 	url = https://github.com/junegunn/vim-plug.git
-[submodule "link/solarized"]
-	path = link/solarized
-	url = https://github.com/altercation/solarized.git

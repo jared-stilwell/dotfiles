@@ -1,29 +1,40 @@
 syntax on
 
 set autoindent
+set backup
+set backupdir=$HOME/.vim/backup
 set background=dark
 set backspace=indent,eol,start
-set backupdir=$HOME/.vim/backup
 set cmdheight=2
 set directory=$HOME/.vim/tmp
+set exrc
 set foldmethod=indent
-set nofoldenable
+set guioptions+=b
+set hidden
 set hlsearch
 set ignorecase
 set incsearch
-set laststatus=2
 set listchars=tab:▸\ ,eol:¬,trail:·
+set mouse=a
 set nocompatible
+set nofoldenable
+set nowrap
 set number
+set redrawtime=10000 " Allow more time for loading syntax on large files
+set relativenumber
 set ruler
-set scrolloff=2
+set scrolloff=8
+set sidescrolloff=8
 set showcmd
 set showmatch
 set smartcase
 set smartindent
+set statusline=%t
+set title
 set tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab
-set visualbell
-set mouse=a
+set updatetime=300 " Reduce time for highlighting other references
+set undofile 
+set wildmode=longest:full,full
 
 filetype plugin indent on
 
@@ -43,15 +54,13 @@ augroup vimrcEx
 	autocmd BufNewFile,BufRead *.es6 set filetype=javascript
 	autocmd BufNewFile,BufRead *.php set filetype=php
 	autocmd BufNewFile,BufRead *.hbs set filetype=handlebars
+  autocmd BufNewFile,BufRead *.blade.php set filetype=blade
 
 	" Enable spellchecking for Markdown
 	autocmd FileType markdown setlocal spell
 
-	" Automatically wrap at 80 characters for Markdown
-	autocmd BufRead,BufNewFile *.md setlocal textwidth=80
-
-	" Automatically wrap at 72 characters and spell check commit messages
-	autocmd FileType gitcommit setlocal textwidth=72
+	" Automatically wrap at 96 characters and spell check commit messages
+	autocmd FileType gitcommit setlocal textwidth=96
 	autocmd FileType gitcommit setlocal spell
 
 	" Allow stylesheets to autocomplete hyphenated words
@@ -60,13 +69,10 @@ augroup vimrcEx
 	" Set tab policy for PHP files
 	autocmd FileType php setlocal shiftwidth=4 tabstop=4 expandtab
 
-	" Standard javascript formatting on save
-	" autocmd bufwritepost *.js silent !standard-format -w %
-	" set autoread
-
 augroup END
 
-" CUSTOM KEY COMMANDS
+"------------------------- MAPPINGS ----------------------------"
+" let mapleader = "\<space>"
 
 " Wrap text
 nmap <Leader>w :set wrap!<CR>
@@ -89,8 +95,40 @@ nmap <Leader>n :tabnext<CR>
 nmap <Leader>N :tabprevious<CR>
 nmap <Leader>0 :tabfirst<CR>
 
+" Reselect visual selection after indenting
+vnoremap < <gv
+vnoremap > >gv
+
+" Maintain the cursor position when yanking a visual selection
+" http://ddrscott.github.io/blog/2016/yank-without-jank/
+vnoremap y myy`y
+vnoremap y myY`y
+
 " Opens a vertical split command with the path of the currently edited file
 " filled in
 " Normal mode: <Leader>v
 nmap <Leader>v :vsplit <C-R>=expand("%:p:h") . "/" <CR>
+
+
+" Edit vimrc file
+nmap <Leader>ev :tabedit ~/.vimrc-base<cr>
+
+"------------------------- SPLITS ----------------------------"
+set splitbelow
+set splitright
+
+nmap <C-J> <C-W><C-J>
+nmap <C-K> <C-W><C-K>
+nmap <C-H> <C-W><C-H>
+nmap <C-L> <C-W><C-L>
+
+" Opens a vertical split command with the path of the currently edited file
+" filled in
+" Normal mode: <Leader>v
+nmap <Leader>v :vsplit <C-R>=expand("%:p:h") . "/" <CR>
+
+" Opens a vertical split command with the path of the currently edited file
+" filled in
+" Normal mode: <Leader>v
+nmap <Leader>s :split <C-R>=expand("%:p:h") . "/" <CR>
 

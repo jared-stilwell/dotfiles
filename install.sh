@@ -17,8 +17,16 @@ function install_vim_plugin() {
 # NOTE: This doesn't pull updates from each module's remote
 git submodule update
 
+# Kitty
+mkdir -p ~/.config/kitty
+install $DIR/kitty/kitty.conf ~/.config/kitty/kitty.conf
+install $DIR/kitty/dracula.conf ~/.config/kitty/dracula.conf
+
 # ZSH dotfiles
 install $DIR/.zshrc ~/.zshrc
+
+# Personal scripts
+cp -R $DIR/scripts ~/scripts
 
 # oh-my-zsh custom files
 rm -rf ~/.oh-my-zsh/custom
@@ -41,6 +49,8 @@ install $DIR/.vimrc-plug ~/.vimrc-plug
 install $DIR/.vimrc-nerdtree ~/.vimrc-nerdtree
 install $DIR/.vimrc-syntastic ~/.vimrc-syntastic
 install $DIR/.vimrc-fzf ~/.vimrc-fzf
+install $DIR/.vimrc-intelephense ~/.vimrc-intelephense
+install $DIR/.vimrc-test ~/.vimrc-test
 
 # Neovim mapping
 mkdir -p $HOME/.vim/backup
@@ -51,6 +61,8 @@ ln -fs ~/.vimrc-base $HOME/.config/nvim/.vimrc-base
 ln -fs ~/.vimrc-nerdtree $HOME/.config/nvim/.vimrc-nerdtree
 ln -fs ~/.vimrc-syntastic $HOME/.config/nvim/.vimrc-syntastic
 ln -fs ~/.vimrc-fzf $HOME/.config/nvim/.vimrc-fzf
+ln -fs ~/.vimrc-intelephense $HOME/.config/nvim/.vimrc-intelephense
+ln -fs ~/.vimrc-test $HOME/.config/nvim/.vimrc-test
 
 ## vim-plug plugin manager
 rm -rf ~/.vim/autoload

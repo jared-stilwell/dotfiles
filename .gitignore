@@ -1,1 +1,4 @@
+*.un~
+custom-oh-my-zsh/plugins
 custom-oh-my-zsh/local.zsh
+custom-oh-my-zsh/environment.zsh

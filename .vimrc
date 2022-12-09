@@ -10,16 +10,19 @@ source ~/.vimrc-nerdtree
 " Synstastic configuration
 source ~/.vimrc-syntastic
 
+" Language Server Configurations
+source ~/.vimrc-intelephense
+
+" Test Runner Support
+source ~/.vimrc-test
+
 " Fuzzy matching
 source ~/.vimrc-fzf
 
-" Solarized color scheme
+" Color settings
 syntax enable
-set background=dark
-colorscheme solarized
 
 " Italicized comments
 let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
 highlight Comment cterm=italic
-
