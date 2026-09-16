@@ -3,7 +3,7 @@
 #--------------------------------------------------------------------------
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="robbyrussell"
+ZSH_THEME="ultima"
 plugins=(
 	docker
 	docker-compose
@@ -30,7 +30,8 @@ export FZF_DEFAULT_COMMAND='ag --ignore ./node_modules -g ""'
 alias ll='ls -la'
 alias ..='cd ..'
 alias ...='cd ../..'
-alias a='artisan'
+alias vi="nvim"
+alias vim="nvim"
 alias cdomz='cd ~/.oh-my-zsh/custom'
 alias pref='vim ~/.zshrc'
 alias repref='. ~/.zshrc'
@@ -45,6 +46,7 @@ alias scm='git commit --no-verify -m "safety commit."'
 # Paths
 #--------------------------------------------------------------------------
 export PATH=/usr/local/bin:$PATH
+export PATH=$PATH:~/bin
 export PATH=$PATH:~/.composer/vendor/laravel/installer/bin
 export PATH=$PATH:~/.composer/vendor/laravel/pint/builds
 export PATH=$PATH:/usr/local/share/npm/bin
@@ -52,6 +54,7 @@ export PATH=./node_modules/.bin:$PATH
 export PATH=$PATH:~/projects/retailmenot-release-tools/jobshell
 export PATH=$PATH:~/scripts
 export PATH=/usr/local/opt/node@16/bin:$PATH
+export PATH=$PATH:~/go/bin
 
 #--------------------------------------------------------------------------
 # Utilities
@@ -71,3 +74,12 @@ EOF
 function laranew {
     composer create-project laravel/laravel ${1}
 }
+
+# bun completions
+[ -s "/Users/juniperstilwell/.bun/_bun" ] && source "/Users/juniperstilwell/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+. "$HOME/.local/bin/env"

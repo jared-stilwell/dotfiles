@@ -1,6 +1,10 @@
 [user]
-	email = juniper.stilwell@rmn.com
 	name = Juniper Stilwell
+	email = juniper.stilwell@rmn.com
+[core]
+	editor = nvim
+[init]
+	defaultBranch = main
 [alias]
     st = status -sb
     co = checkout
@@ -26,12 +30,30 @@
     dsc = diff -w --stat=,80 --cached
     dsf = !sh -c 'git ds $1^!' -
     dr = !sh -c 'git d `cat .git/rebase-merge/stopped-sha`^! -- $1' -
+    nd = !sh -c 'git ds $1@{1}..$1@{0} \"$@\"' -
 		force = !sh -c 'git fetch origin $1 && git reset --hard origin/$1' -
     new = !sh -c 'git ls $1@{1}..$1@{0} \"$@\"' -
-    nd = !sh -c 'git ds $1@{1}..$1@{0} \"$@\"' -
+[credential "https://github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[diff]
+	tool = Kaleidoscope
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+	trustExitCode = true
+[merge]
+	tool = Kaleidoscope
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+[mergetool]
+	prompt = false
 [diff "sopsdiffer"]
 	textconv = sops -d
-[init]
-	defaultBranch = main
 [http]
 	postBuffer = 524288000

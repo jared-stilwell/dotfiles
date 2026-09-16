@@ -4,7 +4,7 @@
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
 function install() {
-	if [ ! -f "$2" ]; then
+	if [ ! -e "$2" ]; then
 		ln -s "$1" "$2"
 	fi
 }
@@ -20,6 +20,9 @@ git submodule update
 # ZSH dotfiles
 install $DIR/.zshrc ~/.zshrc
 
+# Git config
+install $DIR/gitconfig ~/.gitconfig
+
 # Personal scripts
 cp -R $DIR/scripts ~/scripts
 
@@ -27,17 +30,28 @@ cp -R $DIR/scripts ~/scripts
 rm -rf ~/.oh-my-zsh/custom
 install $DIR/custom-oh-my-zsh ~/.oh-my-zsh/custom
 
-# Vim color schemes
-mkdir -p ~/.vim/colors
-rm -f ~/.vim/colors/solarized.vim
-ln -s \
-	$DIR/link/solarized/vim-colors-solarized/colors/solarized.vim \
-	~/.vim/colors/solarized.vim
-
 # Add term info to allow italics to work
 tic xterm-256color-italic.terminfo
 
-# Vim dotfiles
+# Neovim (lua-based config)
+mkdir -p $HOME/.config
+ln -fs $DIR/nvim $HOME/.config/nvim
+
+# Kitty terminal
+ln -fs $DIR/kitty $HOME/.config/kitty
+
+# Fonts
+mkdir -p $HOME/Library/Fonts
+cp $DIR/fonts/Glass_TTY_VT220.ttf $HOME/Library/Fonts/ 2>/dev/null || true
+# Linux fallback
+if [ "$(uname)" = "Linux" ]; then
+	mkdir -p $HOME/.local/share/fonts
+	cp $DIR/fonts/Glass_TTY_VT220.ttf $HOME/.local/share/fonts/
+	fc-cache -f 2>/dev/null || true
+fi
+
+# Legacy Vim dotfiles (kept for reference)
+mkdir -p $HOME/.vim/backup
 install $DIR/.vimrc ~/.vimrc
 install $DIR/.vimrc-base ~/.vimrc-base
 install $DIR/.vimrc-plug ~/.vimrc-plug
@@ -47,20 +61,7 @@ install $DIR/.vimrc-fzf ~/.vimrc-fzf
 install $DIR/.vimrc-intelephense ~/.vimrc-intelephense
 install $DIR/.vimrc-test ~/.vimrc-test
 
-# Neovim mapping
-mkdir -p $HOME/.vim/backup
-mkdir -p $HOME/.config
-ln -fs ~/.vim $HOME/.config/nvim
-ln -fs ~/.vimrc $HOME/.config/nvim/init.vim
-ln -fs ~/.vimrc-base $HOME/.config/nvim/.vimrc-base
-ln -fs ~/.vimrc-nerdtree $HOME/.config/nvim/.vimrc-nerdtree
-ln -fs ~/.vimrc-syntastic $HOME/.config/nvim/.vimrc-syntastic
-ln -fs ~/.vimrc-fzf $HOME/.config/nvim/.vimrc-fzf
-ln -fs ~/.vimrc-intelephense $HOME/.config/nvim/.vimrc-intelephense
-ln -fs ~/.vimrc-test $HOME/.config/nvim/.vimrc-test
-
 ## vim-plug plugin manager
 rm -rf ~/.vim/autoload
 mkdir -p ~/.vim/autoload
 install $DIR/link/vim-plug/plug.vim ~/.vim/autoload/plug.vim
-
